@@ -30,12 +30,18 @@ export function ChallengeSection({ content }: ChallengeSectionProps) {
               width={704}
               height={302}
             />
-            <ChallengeList section={challenge.employers} />
+            <ChallengeList
+              section={challenge.employers}
+              icon="/images/figma-challenge-employer.svg"
+            />
 
             <div className="relative z-10 mx-auto w-full max-w-[330px] rounded-lg bg-[#ffc600] p-5 text-[#001423] shadow-[0_18px_50px_rgba(255,198,0,0.12)]">
-              <span className="text-4xl" aria-hidden="true">
-                {challenge.mission.icon}
-              </span>
+              <Image
+                src="/images/figma-challenge-mission.svg"
+                alt=""
+                width={60}
+                height={60}
+              />
               <h3 className="mt-2 text-xl font-bold">{challenge.mission.title}</h3>
               <p className="mt-3 text-sm font-semibold leading-snug">
                 {challenge.mission.description}
@@ -48,7 +54,10 @@ export function ChallengeSection({ content }: ChallengeSectionProps) {
               </a>
             </div>
 
-            <ChallengeList section={challenge.candidates} />
+            <ChallengeList
+              section={challenge.candidates}
+              icon="/images/figma-challenge-candidate.svg"
+            />
           </div>
         </div>
       </div>
@@ -58,14 +67,19 @@ export function ChallengeSection({ content }: ChallengeSectionProps) {
 
 type ChallengeListProps = {
   section: LandingContent["challenge"]["employers"];
+  icon: string;
 };
 
-function ChallengeList({ section }: ChallengeListProps) {
+function ChallengeList({ section, icon }: ChallengeListProps) {
   return (
     <div className="relative z-10">
-      <span className="text-4xl" aria-hidden="true">
-        {section.icon}
-      </span>
+      <Image
+        className="h-[60px] w-[60px] object-contain object-left"
+        src={icon}
+        alt=""
+        width={60}
+        height={60}
+      />
       <h3 className="mt-3 text-xl font-bold text-[#eaebe8]">{section.title}</h3>
       <ul className="mt-4 grid gap-3 text-sm text-[#d6d8d4]">
         {section.points.map((point) => (
