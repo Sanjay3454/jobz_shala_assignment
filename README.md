@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jobzshala Frontend Assignment
 
-## Getting Started
+A responsive implementation of the supplied Jobzshala landing-page design. It supports English and Hindi.
 
-First, run the development server:
+## Run locally
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Production check:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run build
+```
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/page.tsx` renders the landing page route.
+- `app/layout.tsx` defines metadata, fonts, and the root HTML language state.
+- `content/en.ts` and `content/hi.ts` hold all visible page copy.
+- `content/index.ts` maps each language code to its content file.
+- `components/` contains one component for each major landing-page section plus shared controls.
+- `public/images/` contains compressed WebP assets used by the hero and supporting sections.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Language Toggle
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The page supports English and Hindi. `LandingPage` keeps the current language in React state and passes the selected content to each section. The toggle updates that state, so all visible copy changes together without reloading the page.
 
-## Deploy on Vercel
+## Assumptions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Figma export only included desktop measurements. Tablet and mobile layouts use responsive adaptations of the same content hierarchy. Supplied Figma image and icon layers are converted to optimized WebP files in `public/images/`; the original exports remain in `public/exported_from_figma/` for reference.
