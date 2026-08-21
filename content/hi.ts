@@ -83,7 +83,6 @@ export const hiContent: LandingContent = {
     description:
       "बढ़ते कारोबारों को भरोसेमंद कार्यबल चाहिए. उम्मीदवारों को वास्तविक अवसर चाहिए. मौजूदा भर्ती प्रक्रिया बिखरी हुई, मैनुअल और धीमी है - जिससे भर्ती में देरी, बढ़ती लागत और उम्मीदवारों का पीछे हटना होता है.",
     employers: {
-      icon: "👷🏽",
       title: "नियोक्ताओं की चुनौतियां",
       points: [
         "गुणवत्तापूर्ण कार्यबल की कमी",
@@ -94,7 +93,6 @@ export const hiContent: LandingContent = {
       ],
     },
     candidates: {
-      icon: "👨🏽‍💼",
       title: "उम्मीदवारों की चुनौतियां",
       points: [
         "नौकरी के झूठे वादे",
@@ -104,7 +102,6 @@ export const hiContent: LandingContent = {
       ],
     },
     mission: {
-      icon: "🎯",
       title: "हमारा मिशन",
       description:
         "Jobzshala AI, तकनीक और मानवीय विशेषज्ञता को जोड़कर GCC में भरोसेमंद कार्यबल संबंध बनाता है.",

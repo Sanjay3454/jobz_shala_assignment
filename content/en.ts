@@ -81,7 +81,6 @@ export const enContent = {
     description:
       "Growing businesses need reliable workforce. Candidates need genuine opportunities. Existing recruitment stays fragmented, manual and slow - leading to delayed hiring, rising costs, and dropouts.",
     employers: {
-      icon: "👷🏽",
       title: "Employers Face",
       points: [
         "Quality workforce shortages",
@@ -92,7 +91,6 @@ export const enContent = {
       ],
     },
     candidates: {
-      icon: "👨🏽‍💼",
       title: "Candidates Face",
       points: [
         "Fake job promises",
@@ -102,7 +100,6 @@ export const enContent = {
       ],
     },
     mission: {
-      icon: "🎯",
       title: "Our Mission",
       description:
         "Jobzshala bridges this gap by combining AI, technology and human expertise to create trusted workforce connections across the GCC.",
